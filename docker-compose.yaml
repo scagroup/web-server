@@ -58,14 +58,13 @@ services:
       context: ./docker_config
       dockerfile: jenkins
     container_name: "jenkins"
-    privileged: true
     links:
       - nginx
     ports:
-      - 8001:8080
+      - 8002:8080
       - 50000:50000
     volumes:
-      - ./data/jenkins:/var/jenkins_home
+      - ./data/jenkins/:/var/jenkins_home/
 #    environment:
-#      - USER=root
+#      - JAVA_OPTS=-Dhudson.footerURL=localhost
 
