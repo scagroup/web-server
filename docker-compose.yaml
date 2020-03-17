@@ -58,11 +58,16 @@ services:
       context: ./docker_config
       dockerfile: jenkins
     container_name: "jenkins"
-    links:
-      - nginx
     ports:
-      - 8002:8080
+      - 8001:8080
       - 50000:50000
     volumes:
       - ./data/jenkins/:/var/jenkins_home/
+  jira:
+    build:
+      context: ./docker_config
+      dockerfile: jira
+    container_name: "jira"
+    ports:
+      -  8002:8080
 
