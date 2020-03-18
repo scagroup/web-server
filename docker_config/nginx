@@ -1,1 +1,3 @@
-FROM nginx:stable
+ARG NGINX_VERSION
+
+FROM nginx:$NGINX_VERSION

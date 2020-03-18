@@ -1,1 +1,3 @@
-FROM cptactionhank/atlassian-jira
+ARG JIRA_VERSION
+
+FROM cptactionhank/atlassian-jira:$JIRA_VERSION
