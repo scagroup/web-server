@@ -13,6 +13,7 @@ services:
     container_name: "php"
     volumes: 
       -  ./data/www/:/var/www/html/
+    restart: always
   nginx:
     build: 
       context: ${FOLDER_CONFIG_DOCKER}
@@ -28,6 +29,7 @@ services:
     volumes: 
       - ./config/nginx.conf:/etc/nginx/conf.d/default.conf
       - ./data/www/:/var/www/html/
+    restart: always
   mysql:
     build: 
       context: ${FOLDER_CONFIG_DOCKER}
@@ -45,6 +47,7 @@ services:
       - MYSQL_PASSWORD=${MYSQL_PASSWORD}
     volumes:
       - ./data/MySQL:/var/lib/mysql
+    restart: always
   pma:
     build: 
       context: ${FOLDER_CONFIG_DOCKER}
@@ -61,6 +64,7 @@ services:
       MYSQL_USERNAME: root
       MYSQL_ROOT_PASSWORD: root
       DATABASE: test
+    restart: always
 #  jenkins:
 #    build:
 #      context: ${FOLDER_CONFIG_DOCKER}
@@ -73,6 +77,7 @@ services:
 #      - ${JENKINS_AGENT_PORT}:50000
 #    volumes:
 #      - ./data/jenkins/:/var/jenkins_home/
+#    restart: always 
 #  jira:
 #    build:
 #      context: ${FOLDER_CONFIG_DOCKER}
@@ -82,3 +87,4 @@ services:
 #    container_name: "jira"
 #    ports:
 #      -  ${JIRA_PORT}:8080
+#    restart: always
