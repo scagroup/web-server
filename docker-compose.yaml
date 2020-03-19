@@ -61,18 +61,18 @@ services:
       MYSQL_USERNAME: root
       MYSQL_ROOT_PASSWORD: root
       DATABASE: test
-  jenkins:
-    build:
-      context: ${FOLDER_CONFIG_DOCKER}
-      dockerfile: jenkins
-      args:
-        JENKINS_VERSION: ${JENKINS_VERSION}
-    container_name: "jenkins"
-    ports:
-      - ${JENKINS_PORT}:8080
-      - ${JENKINS_AGENT_PORT}:50000
-    volumes:
-      - ./data/jenkins/:/var/jenkins_home/
+#  jenkins:
+#    build:
+#      context: ${FOLDER_CONFIG_DOCKER}
+#      dockerfile: jenkins
+#      args:
+#        JENKINS_VERSION: ${JENKINS_VERSION}
+#    container_name: "jenkins"
+#    ports:
+#      - ${JENKINS_PORT}:8080
+#      - ${JENKINS_AGENT_PORT}:50000
+#    volumes:
+#      - ./data/jenkins/:/var/jenkins_home/
 #  jira:
 #    build:
 #      context: ${FOLDER_CONFIG_DOCKER}
