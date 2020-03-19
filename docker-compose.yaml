@@ -73,12 +73,12 @@ services:
       - ${JENKINS_AGENT_PORT}:50000
     volumes:
       - ./data/jenkins/:/var/jenkins_home/
-  jira:
-    build:
-      context: ${FOLDER_CONFIG_DOCKER}
-      dockerfile: jira
-      args:
-        JIRA_VERSION: ${JIRA_VERSION}
-    container_name: "jira"
-    ports:
-      -  ${JIRA_PORT}:8080
+#  jira:
+#    build:
+#      context: ${FOLDER_CONFIG_DOCKER}
+#      dockerfile: jira
+#      args:
+#        JIRA_VERSION: ${JIRA_VERSION}
+#    container_name: "jira"
+#    ports:
+#      -  ${JIRA_PORT}:8080
