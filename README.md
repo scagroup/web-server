@@ -5,8 +5,8 @@
   + Php 7.4.1
   + Nginx
   + Mysql 5.7
-  + Jenkins
-  + Jira
+  + Jenkins ( Отключена по умолчанию )
+  + Jira ( Отключена по умолчанию )
   + Phpmyadmin
 # Быстрый старт
 Для начала работы необходимо установить пакеты [docker](https://docs.docker.com/install/linux/docker-ce/) и [docker-compose](https://docs.docker.com/compose/install/), подробнее об установке описано на сайте разработчика. 
