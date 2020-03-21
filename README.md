@@ -25,17 +25,17 @@ docker-compose up -d
 # Окружение
 В конфигурировании сервера и сервисов, имеется 2 распространенных окружения, это Development и Production. По умолчанию используется окружение Development которое вы запускаете командой:
 ```sh
-docker-compose up
+docker-compose up -d
 ```
 Docker-compose по умолчанию использует файл конфигурации ```docker-compose.yaml``` в корне проекта.
-Мы расшири файл кофигурации для окружения Production, путем добавления файла docker-compose.production.yaml
+Мы расширили файл кофигурации для окружения Production, путем добавления файла docker-compose.production.yaml
 Для сборки и запуска проекта в окружении Production необходимо запускать комманды с указание файлов, путем добавления ключа и имени файла `-f $filename`. Указывая последовательно, вы перекрываете конфигурации файлов, поэтому для запуска и сборки в окружении Production, необходимо запускать сборку и запуск контейнеров, следующим образом:
 ```sh
-docker-compose -f docker-compose.yaml - docker-compose.production.yaml build
+docker-compose -f docker-compose.yaml -f docker-compose.production.yaml build
 ```
 и для запуска контейнера 
 ```sh
-docker-compose -f docker-compose.yaml - docker-compose.production.yaml up
+docker-compose -f docker-compose.yaml -f docker-compose.production.yaml up -d
 ```
 # Конфигурирования сервисов
 В сборку включены дополнительные сервисы, помимо веб сервера. Для конфигурации сервисов необходимо отредактировать файл ```docker-compose.yaml ```.
