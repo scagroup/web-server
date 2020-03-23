@@ -8,11 +8,10 @@ services:
         PHP_VERSION: ${PHP_VERSION}
     links: 
       -  mysql
-    ports:
-      -  ${PHPFPM_PORT}:9000
     container_name: "php"
     volumes: 
       -  ./data/www/:/var/www/html/
+      -  ./config/php.ini:/usr/local/etc/php/php.ini
     restart: always
   nginx:
     build: 
