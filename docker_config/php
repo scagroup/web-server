@@ -4,5 +4,7 @@ FROM php:$PHP_VERSION-fpm
 
 RUN pecl install xdebug
 
+RUN docker-php-ext-install mysqli pdo_mysql
+
 RUN docker-php-ext-enable xdebug
 
