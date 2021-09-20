@@ -8,6 +8,7 @@
   + Jenkins ( Отключена по умолчанию )
   + Jira ( Отключена по умолчанию )
   + Phpmyadmin
+  + Redis
 # Быстрый старт
 Для начала работы необходимо установить пакеты [docker](https://docs.docker.com/install/linux/docker-ce/) и [docker-compose](https://docs.docker.com/compose/install/), подробнее об установке описано на сайте разработчика. 
 Для клонирования репозитория необходимо выполнить: 
