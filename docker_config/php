@@ -2,9 +2,11 @@ ARG PHP_VERSION
 
 FROM php:$PHP_VERSION-fpm
 
-RUN pecl install xdebug
+RUN pecl install xdebug redis
 
 RUN docker-php-ext-install mysqli pdo_mysql
+
+RUN docker-php-ext-enable redis
 
 RUN docker-php-ext-enable xdebug
 
